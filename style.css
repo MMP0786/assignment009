@@ -1,0 +1,252 @@
+                                    /* Reseat the the defalt margin and padding */
+*{
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    overflow-x: hidden;
+}
+body{
+    margin: 1%;
+    font-family: 'Dancing Script', cursive;
+    
+}
+                                    /* I make the color var which i use in this project */
+:root{
+    --blue :#5e80a4;
+    --orange :#d67f74;
+    --green:#95d190;
+    --seo:#a3cecf;
+    --social:#7e8694;
+    --across:#b0a38d;
+    --yellow:#bd9e6a;
+    --bg:#93adc2;
+}
+
+                                    /* Header starting from here */
+
+.banner{
+    width: 100%;
+    height: 200px;
+    background-image: url("/Image/pexels-photo-2565919.jpeg"); 
+    background-color: var(--blue);
+    background-size: contain;
+    /* background-size:unset; */
+
+    position: relative;
+}
+.banner img{
+    position: absolute;
+    top: 30%;
+    right: 40%;
+}
+
+                                    /* Navigation starting here */
+
+.fa-bars{
+    position:absolute;
+    top: 1rem;
+    right: 10%;
+}
+#bars{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(180, 153, 103);
+}
+ul{
+    display:flex;
+    list-style: none;
+    justify-content:space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 124%;
+    margin: 0 10% 0 0;
+    /* display: block; */
+}
+li{
+    margin: 1rem;
+    cursor: pointer;
+    color: rgb(180, 153, 103);
+}
+
+                                    /* Main content starting here */
+main{
+    background-color: rgb(134, 134, 164);
+}
+.flex1{
+    display:flex;
+    justify-content: space-between;
+    font-size: 4rem;
+    /* margin: 1rem; */
+    background-color: bisque;
+}
+.html p{
+    font-size: 1.4rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+#flex1_box1{
+    background-color: var(--orange);
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+}
+#flex1_box2{
+    background-color: var(--green);
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+}
+#flex1_box3{
+    background-color: var(--seo);
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+}
+#flex1_box4{
+    background-color: var(--social);
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+                                    /* Grid starting from here */
+
+.grid_tablet{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto ;
+}
+.grid_tablet img{
+    width: 50Vw;
+}
+.box1{
+    background-color: var(--social);
+    text-align:justify;
+    padding: 2%;
+    height: 12rem;
+    
+}
+.box2{
+    background-color: var(--bg);
+    text-align:justify;
+    padding: 2%;
+    
+}
+.box3{
+    background-color: var(--orange);
+    text-align:justify;
+    padding: 2%;
+    
+}
+h3{
+    text-align: center;
+    color:black;
+    margin: .9rem;
+    font-size: 1.5rem;
+}
+.flex_below{
+    display: flex;
+}
+.google_search{
+    background-color: var(--social);
+    width: 31.33;
+    padding: 1%;
+    height: 16rem;
+}
+.marketing{
+    background-color: var(--yellow);
+    width: 32.33;
+    padding: 1%;
+    height: 16rem;
+}
+.happy_customers{
+    background-color: var(--seo);
+    width: 32.33;
+    padding: 1%;
+    height: 16rem;
+}
+
+                                    /* Footer starting here */
+.footer_up{
+    background-color: var(--blue);
+    height: 5rem;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer_up i{
+    font-size: 200%;
+    cursor: pointer;
+    margin: 0 2rem;
+
+}
+.footer_below{
+    background-color: rgb(43, 22, 22);
+    height: 1rem;
+    text-align: center;
+    font-size: .7rem;
+    overflow: hidden;
+    padding: .3rem;
+
+}
+
+.footer_below i span{
+    margin-bottom: .8rem;
+}
+
+                                    /* Responsive media query starting here */
+
+@media only screen and (max-width: 500px) {
+
+    .flex1{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #flex1_box1{
+        min-width: 100%;
+        text-align: center;
+    }
+    #flex1_box2{
+        min-width: 100%;
+        text-align: center;
+    }
+    #flex1_box3{
+        min-width: 100%;
+        text-align: center;
+    }
+    #flex1_box4{
+        min-width: 100%;
+        text-align: center;
+    }
+    ul{
+        display: none;
+    }
+    #bars{
+        display: block;
+
+    }
+    .grid_tablet{
+        grid-template-columns: auto;
+        
+    }
+    #mobile{
+        display: none;
+    }
+    .flex_below{
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+    .footer_up{
+        flex-wrap: wrap;
+    }
+    .grid_tablet img{
+        width: 100%;
+    }
+}
